@@ -1,0 +1,4 @@
+published_page_category_bg:
+  default: ""
+  type: "list"
+  description: "Semicolon delimited in this order: published page category-slug;background image url"

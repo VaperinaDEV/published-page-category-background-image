@@ -1,0 +1,14 @@
+@import "str-to-list";
+
+$list: str-to-list("#{$published_page_category_bg}", "|");
+$nested-list: ();
+@each $item in $list {
+  $item: str-to-list("#{$item}", ";");
+  $nested-list: append($nested-list, $item);
+}
+
+@each $category-slug, $background-img in $nested-list {
+  .published-page.#{$category-slug} {
+    background-image: url($background-img);
+  }
+}
